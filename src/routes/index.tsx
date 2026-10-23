@@ -122,9 +122,9 @@ function Index() {
         <section className="mt-10 text-center">
           <p className="text-[10px] font-bold tracking-widest text-muted-foreground">ĐƯỢC HỖ TRỢ BỞI AI</p>
           <div className="mt-4 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
-            <div className="flex w-max gap-2 animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
+            <div className="flex w-max animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
               {[...features, ...features].map((f, i) => (
-                <button key={i} className="group flex w-[72px] shrink-0 flex-col items-center gap-2">
+                <button key={i} className="group mr-2 flex w-[72px] shrink-0 flex-col items-center gap-2">
                   <span className="grid h-8 w-8 place-items-center rounded-full border border-border bg-card transition group-hover:border-primary">
                     <f.icon className="h-3.5 w-3.5 text-primary" />
                   </span>
