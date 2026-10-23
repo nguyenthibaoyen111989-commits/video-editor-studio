@@ -8,9 +8,9 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clips — Biến video dài thành nhiều Short bằng AI" },
+      { title: "Master Bảo Yến — Biến video dài thành nhiều Short bằng AI" },
       { name: "description", content: "Kéo thả video dài, AI quét và đề xuất đoạn hay nhất, xuất nhiều short viral." },
-      { property: "og:title", content: "Clips — Video dài → Nhiều Short" },
+      { property: "og:title", content: "Master Bảo Yến — Video dài → Nhiều Short" },
       { property: "og:description", content: "Biến video thô thành content viral — tự động, bằng AI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -58,7 +58,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground border-l-2 border-primary/60">
       <header className="flex h-12 items-center justify-between border-b border-[var(--gold-line)] px-5">
         <div className="flex items-center gap-4">
-          <span className="text-3xl font-extrabold italic text-gold-gradient">Clips</span>
+          <span className="text-2xl font-extrabold italic text-gold-gradient">Master Bảo Yến</span>
           <span className="text-xs font-semibold">Video dài → Nhiều Short</span>
         </div>
         <span className="hidden text-xs font-semibold md:block">Thời Gian – Thu Nhập – Tự Do</span>
@@ -82,7 +82,7 @@ function Index() {
       <main className="mx-auto max-w-5xl px-4 pb-24">
         <section className="relative mx-auto max-w-md pt-4 text-center">
           <div aria-hidden className="pointer-events-none absolute inset-x-0 top-6 -z-0 select-none text-center text-[120px] font-extrabold leading-none text-muted/80 md:-mx-40">
-            Clipsale
+            Bảo Yến
           </div>
           <div className="relative">
             <p className="text-xs font-semibold">Biến video thô thành content viral — tự động, bằng AI.</p>
@@ -121,15 +121,17 @@ function Index() {
 
         <section className="mt-10 text-center">
           <p className="text-[10px] font-bold tracking-widest text-muted-foreground">ĐƯỢC HỖ TRỢ BỞI AI</p>
-          <div className="mt-4 flex justify-center gap-2 overflow-x-auto [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
-            {features.map((f, i) => (
-              <button key={i} className="group flex w-[72px] shrink-0 flex-col items-center gap-2">
-                <span className="grid h-8 w-8 place-items-center rounded-full border border-border bg-card transition group-hover:border-primary">
-                  <f.icon className="h-3.5 w-3.5 text-primary" />
-                </span>
-                <span className="text-[9px] font-semibold leading-tight text-muted-foreground group-hover:text-foreground">{f.label}</span>
-              </button>
-            ))}
+          <div className="mt-4 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
+            <div className="flex w-max animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
+              {[...features, ...features].map((f, i) => (
+                <button key={i} className="group mr-2 flex w-[72px] shrink-0 flex-col items-center gap-2">
+                  <span className="grid h-8 w-8 place-items-center rounded-full border border-border bg-card transition group-hover:border-primary">
+                    <f.icon className="h-3.5 w-3.5 text-primary" />
+                  </span>
+                  <span className="text-[9px] font-semibold leading-tight text-muted-foreground group-hover:text-foreground">{f.label}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </section>
 
