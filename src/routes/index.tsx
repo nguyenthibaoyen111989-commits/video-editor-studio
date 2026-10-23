@@ -4,6 +4,11 @@ import {
   Home, Upload, Music, SlidersHorizontal, Sparkles, Layers, Download, Captions,
   Scissors, Smartphone, Volume2, VolumeX, Folder, Tag, Play, Star, Pencil,
 } from "lucide-react";
+import canh1 from "@/assets/canh1.mp4.asset.json";
+import canh2 from "@/assets/canh2.mp4.asset.json";
+import canh3 from "@/assets/canh3.mp4.asset.json";
+import canh4 from "@/assets/canh4.mp4.asset.json";
+import canh5 from "@/assets/canh5.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
