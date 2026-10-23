@@ -145,13 +145,18 @@ function Index() {
         <section className="mt-12">
           <p className="text-center text-[10px] font-bold tracking-widest text-muted-foreground">VIDEO MẪU</p>
           <div className="mt-4 grid grid-cols-3 gap-3 md:grid-cols-6">
-            {muted.map((m, i) => (
+            {sampleVideos.map((v, i) => (
               <div key={i} className="overflow-hidden rounded-lg border border-border bg-card">
                 <div className="relative aspect-[9/16] bg-gradient-to-b from-muted to-accent">
-                  <Play className="absolute inset-0 m-auto h-8 w-8 text-muted-foreground/50" />
-                  <button onClick={() => setMuted(muted.map((v, j) => (j === i ? !v : v)))}
+                  <video
+                    src={v.url}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    autoPlay loop playsInline muted={muted[i]}
+                    onClick={() => setMuted(muted.map((mv, j) => (j === i ? !mv : mv)))}
+                  />
+                  <button onClick={() => setMuted(muted.map((mv, j) => (j === i ? !mv : mv)))}
                     className="absolute right-2 top-2 grid h-5 w-5 place-items-center rounded-full bg-background/70">
-                    {m ? <VolumeX className="h-3 w-3" /> : <Volume2 className="h-3 w-3" />}
+                    {muted[i] ? <VolumeX className="h-3 w-3" /> : <Volume2 className="h-3 w-3" />}
                   </button>
                 </div>
                 <p className="px-2 py-2 text-[10px] font-semibold">Video mẫu {i + 1}</p>
