@@ -39,6 +39,8 @@ const features = [
   { icon: SlidersHorizontal, label: "Lọc Màu Điện Ảnh" },
 ];
 
+const sampleVideos = [canh1, canh2, canh3, canh4, canh5, canh1];
+
 const modes = ["Talking-head", "Nhiều clip + Nhạc", "Video dài → Short"];
 
 const projects = [
