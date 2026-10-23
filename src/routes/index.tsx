@@ -8,9 +8,9 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clips — Biến video dài thành nhiều Short bằng AI" },
+      { title: "Master Bảo Yến — Biến video dài thành nhiều Short bằng AI" },
       { name: "description", content: "Kéo thả video dài, AI quét và đề xuất đoạn hay nhất, xuất nhiều short viral." },
-      { property: "og:title", content: "Clips — Video dài → Nhiều Short" },
+      { property: "og:title", content: "Master Bảo Yến — Video dài → Nhiều Short" },
       { property: "og:description", content: "Biến video thô thành content viral — tự động, bằng AI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
