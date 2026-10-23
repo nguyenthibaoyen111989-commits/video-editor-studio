@@ -160,6 +160,11 @@
   --destructive: oklch(0.6 0.22 25);
   --gold-line: oklch(0.6 0.13 85 / 60%);
 }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 body { font-family: "Be Vietnam Pro", system-ui, sans-serif; }
 @utility text-gold-gradient {
   background: linear-gradient(180deg, oklch(0.95 0.15 95), oklch(0.75 0.17 70));
